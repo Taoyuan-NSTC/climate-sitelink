@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相關網站連結 - 桃園市災害情資網</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 整體背景改為淺粉紅色調，與圖片上方背景呼叫 */
+        body { 
+            font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft JhengHei", sans-serif; 
+            background-color: #fce4e4; 
+            padding: 40px 20px; 
+            line-height: 1.8; 
+            color: #4a1414; 
+            margin: 0; 
+        }
+        .container { max-width: 1000px; margin: auto; }
+        
+        /* 標題改為深紅色 */
+        h1 { color: #b71c1c; text-align: center; font-size: 2.2rem; margin-bottom: 10px; font-weight: bold; }
+        .header-underline { width: 100px; height: 4px; background: #e57373; margin: 0 auto 40px; border-radius: 2px; }
+        
+        /* 卡片邊框與陰影調整為紅灰色調 */
+        .accordion-item { 
+            background: #ffffff; 
+            border-radius: 12px; 
+            margin-bottom: 15px; 
+            box-shadow: 0 4px 15px rgba(183, 28, 28, 0.08); 
+            border: 1px solid #ffcdd2; 
+            overflow: hidden; 
+            transition: 0.3s; 
+        }
+        .accordion-header { padding: 22px 25px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: background 0.3s; user-select: none; }
+        .accordion-header:hover { background-color: #fff5f5; }
+        
+        /* 標題與圖示顏色改為桃紅/深紅 */
+        .header-title { font-size: 1.25rem; font-weight: bold; color: #880e4f; display: flex; align-items: center; }
+        .header-title i { margin-right: 15px; color: #e57373; font-size: 1.4rem; width: 30px; text-align: center; }
+        
+        .arrow { transition: transform 0.4s ease; color: #ef9a9a; font-size: 1.1rem; }
+        .active .arrow { transform: rotate(180deg); color: #b71c1c; }
+        
+        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; background-color: #ffffff; }
+        .content-inner { padding: 0 25px 30px 70px; border-top: 1px solid #ffebee; color: #5d4037; font-size: 1.05rem; text-align: justify; }
+        
+        /* 按鈕改為深紅色 */
+        .btn-link { 
+            display: inline-flex; 
+            align-items: center; 
+            margin-top: 20px; 
+            padding: 10px 24px; 
+            background-color: #d32f2f; 
+            color: white !important; 
+            text-decoration: none; 
+            border-radius: 25px; 
+            font-size: 0.95rem; 
+            font-weight: bold; 
+            transition: 0.3s; 
+        }
+        .btn-link i { margin-left: 8px; font-size: 0.8rem; }
+        .btn-link:hover { 
+            background-color: #b71c1c; 
+            box-shadow: 0 4px 12px rgba(183, 28, 28, 0.3); 
+            transform: translateY(-1px); 
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .header-title { font-size: 1.1rem; }
+            .content-inner { padding: 0 20px 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>相關網站連結</h1>
+        <div class="header-underline"></div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="header-title"><i class="fas fa-landmark"></i> 環境部氣候變遷署</div>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    環境部氣候變遷署全球資訊網是由政府專責規畫與推動全國氣候變遷因應政策、溫室氣體減量與調適措施的官方平台。提供包括國家氣候變遷行動綱領、2050 淨零排放路徑、國家自定貢獻（NDC）、碳費政策與溫室氣體管理等核心政策資訊和資源。
+                    <br>
+                    <a href="https://www.cca.gov.tw/" target="_blank" class="btn-link">前往官方網站 <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="header-title"><i class="fas fa-city"></i> 桃園市政府環境保護局淨零專區</div>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    彙整桃園市在減碳、淨零城市政策與氣候調適策略方面的重要資訊。內容包括桃園市淨零路徑規劃、淨零會報制度、氣候變遷調適計畫、碳中和資訊平台連結與相關自治條例說明。
+                    <br>
+                    <a href="https://tydep.tycg.gov.tw/cp.aspx?n=19931" target="_blank" class="btn-link">前往專區網站 <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="header-title"><i class="fas fa-chart-line"></i> 臺灣氣候變遷推估資訊與調適知識平台 (TCCIP)</div>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    由國家災害防救科技中心擔任計畫辦公室，以產製符合臺灣氣候變遷研究所需氣候資料、提供加值與服務為主要任務。
+                    <br>
+                    <a href="https://tccip.ncdr.nat.gov.tw/au_01.aspx" target="_blank" class="btn-link">前往 TCCIP 平台 <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="header-title"><i class="fas fa-exclamation-triangle"></i> 氣候變遷災害風險調適平台 (Dr.A)</div>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    旨在整合氣候變遷與災害風險研究成果。透過風險圖資、情境模擬與互動地圖，展示不同暖化情境下的災害風險分布，支援調適策略規劃。
+                    <br>
+                    <a href="https://dra.ncdr.nat.gov.tw/" target="_blank" class="btn-link">前往 Dr.A 平台 <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="header-title"><i class="fas fa-hourglass-half"></i> 氣候變遷平台［鑑古知今，探未來］</div>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    整合、展示和分析氣候變遷相關的歷史與未來資訊，協助使用者從過去資料出發，理解未來可能的變化趨勢與影響。
+                    <br>
+                    <a href="https://eocdss.ncdr.nat.gov.tw/web/cc" target="_blank" class="btn-link">前往觀測平台 <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                <div class="header-title"><i class="fas fa-seedling"></i> 農業災害與氣候變遷風險資訊站</div>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="accordion-content">
+                <div class="content-inner">
+                    專門呈現氣候變遷對農業影響相關的風險圖資。幫助政府與農民理解氣候變遷如何影響農作物安全，促進科學化的災害管理。
+                    <br>
+                    <a href="https://acca.ncdr.nat.gov.tw/" target="_blank" class="btn-link">前往農業風險站 <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleAccordion(header) {
+            header.classList.toggle('active');
+            const content = header.nextElementSibling;
+            if (header.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = "0";
+            }
+        }
+    </script>
+</body>
+</html>
